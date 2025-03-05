@@ -128,12 +128,14 @@ Replace `YOUR_WIFI_SSID`, `YOUR_WIFI_PASSWORD`, and `YOUR_SERVER_IP` with your a
 ## 📷 UI Preview  
 
 The web dashboard provides a simple interface to toggle LEDs:  
-![UI Preview](https://your-image-url.com/dashboard-preview.png)  
+![image](https://github.com/user-attachments/assets/8dee7bf9-9668-4127-9efb-b56c1b285057)
+![image](https://github.com/user-attachments/assets/933f6963-088f-47e1-8deb-82392e192d70)
+
+
 
 ---
 
-## 🚀 Future Improvements  
-- Add WebSockets for real-time updates  
+## 🚀 Future Improvements   
 - Implement MQTT for better IoT communication  
 
 ---
