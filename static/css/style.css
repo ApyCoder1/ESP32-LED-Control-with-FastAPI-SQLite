@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-align: center;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.led-card {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.led-status {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.led-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.led-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 40px;
+    background: #e74c3c;
+    border-radius: 25px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.led-switch.on {
+    background: #2ecc71;
+}
+
+.led-switch .switch-circle {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 5px;
+    transition: 0.3s;
+}
+
+.led-switch.on .switch-circle {
+    left: 45px;
+}
+
+/* LED icon visibility */
+.led-icon-on {
+    display: none;
+    font-size: 50px;
+    color: yellow;
+    margin-bottom: 10px; /* Position the icon above the switch */
+}
+
+/* Show LED icon only when on */
+.led-switch.on + .led-icon-on {
+    display: block;
+}
+
+.status-update {
+    font-size: 0.9rem;
+    color: #2ecc71;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .dashboard {
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        gap: 20px;
+    }
+    .led-card {
+        height: 220px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+    .led-card {
+        height: 200px;
+        padding: 10px;
+    }
+}

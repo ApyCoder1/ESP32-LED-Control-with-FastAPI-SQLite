@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT LED Control - Dashboard</title>
+    <!-- Link to your custom CSS -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body onload="getLEDStates()">
+    <div>
+        <h1>ESP32 LED Control Dashboard</h1>
+        <div class="dashboard">
+            <div class="led-card">
+                <div id="status1" class="led-status">Fetching LED 1 state...</div>
+                <div class="led-container">
+                    <i id="led-icon-on1" class="fas fa-lightbulb led-icon-on"></i>
+                    <div id="led-switch1" class="led-switch" onclick="updateLED(1, !document.getElementById('led-switch1').classList.contains('on'))">
+                        <div class="switch-circle"></div>
+                    </div>
+                    <div id="status-update-1" class="status-update"></div>
+                </div>
+            </div>
+
+            <div class="led-card">
+                <div id="status2" class="led-status">Fetching LED 2 state...</div>
+                <div class="led-container">
+                    <i id="led-icon-on2" class="fas fa-lightbulb led-icon-on"></i>
+                    <div id="led-switch2" class="led-switch" onclick="updateLED(2, !document.getElementById('led-switch2').classList.contains('on'))">
+                        <div class="switch-circle"></div>
+                    </div>
+                    <div id="status-update-2" class="status-update"></div>
+                </div>
+            </div>
+
+            <div class="led-card">
+                <div id="status3" class="led-status">Fetching LED 3 state...</div>
+                <div class="led-container">
+                    <i id="led-icon-on3" class="fas fa-lightbulb led-icon-on"></i>
+                    <div id="led-switch3" class="led-switch" onclick="updateLED(3, !document.getElementById('led-switch3').classList.contains('on'))">
+                        <div class="switch-circle"></div>
+                    </div>
+                    <div id="status-update-3" class="status-update"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Link to your custom JavaScript -->
+    <script src="static/js/script.js" defer></script>
+</body>
+</html>
